@@ -317,7 +317,7 @@ open class RecordingService : Service(), ScreenRecorder.Listener {
         )
 
         val builder = Notification.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_recorder)
+            .setSmallIcon(R.drawable.ic_notification_info)
             .setContentTitle(getString(R.string.notification_recording_title))
             .setContentIntent(openApp)
             .setOngoing(true)
@@ -402,7 +402,7 @@ open class RecordingService : Service(), ScreenRecorder.Listener {
 
     private fun createSavingNotification(): Notification {
         return Notification.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_recorder)
+            .setSmallIcon(R.drawable.ic_notification_info)
             .setContentTitle(getString(R.string.notification_recording_title))
             .setContentText(getString(R.string.notification_saving))
             .setOngoing(true)
@@ -456,7 +456,7 @@ open class RecordingService : Service(), ScreenRecorder.Listener {
         ).build()
 
         return Notification.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_recorder)
+            .setSmallIcon(R.drawable.ic_notification_info)
             .setContentTitle(getString(R.string.notification_saved_title))
             .setContentText(getString(R.string.notification_saved_text))
             .setContentIntent(viewPendingIntent)
@@ -468,7 +468,7 @@ open class RecordingService : Service(), ScreenRecorder.Listener {
 
     private fun createErrorNotification(): Notification {
         return Notification.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_recorder)
+            .setSmallIcon(R.drawable.ic_notification_info)
             .setContentTitle(getString(R.string.notification_error_title))
             .setContentText(getString(R.string.notification_error_text))
             .setAutoCancel(true)
