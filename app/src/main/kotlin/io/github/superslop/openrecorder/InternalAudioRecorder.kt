@@ -368,7 +368,7 @@ class InternalAudioRecorder(
     private fun waitUntilActive(): Boolean {
         return synchronized(pauseLock) {
             while (running && paused) {
-                pauseLock.wait()
+                (pauseLock as Object).wait()
             }
             running
         }
@@ -391,14 +391,13 @@ class InternalAudioRecorder(
         frameCount: Int,
     ): Long {
         val estimateNanos: Long
-        val timestampResult: Int
-        try {
-            timestampResult = record.getTimestamp(
+        val timestampResult: Int = try {
+            record.getTimestamp(
                 captureTimestamp,
                 AudioTimestamp.TIMEBASE_MONOTONIC,
             )
         } catch (ignored: RuntimeException) {
-            timestampResult = AudioRecord.ERROR_INVALID_OPERATION
+            AudioRecord.ERROR_INVALID_OPERATION
         }
         if (timestampResult == AudioRecord.SUCCESS) {
             estimateNanos = AudioFrameClock.frameTimeNanos(
@@ -746,7 +745,7 @@ class InternalAudioRecorder(
                 throw IOException("Unable to resume internal audio capture", error)
             }
             paused = false
-            pauseLock.notifyAll()
+            (pauseLock as Object).notifyAll()
         }
     }
 
@@ -840,7 +839,7 @@ class InternalAudioRecorder(
     private fun wakePausedWorker() {
         synchronized(pauseLock) {
             paused = false
-            pauseLock.notifyAll()
+            (pauseLock as Object).notifyAll()
         }
     }
 

@@ -685,7 +685,7 @@ class VideoTrackRecorder(
             try {
                 var supportsMimeType: Boolean = false
                 for (supportedType in codecInfo.getSupportedTypes()) {
-                    if (mimeType.equalsIgnoreCase(supportedType)) {
+                    if (mimeType.equals(supportedType, ignoreCase = true)) {
                         supportsMimeType = true
                         break
                     }
