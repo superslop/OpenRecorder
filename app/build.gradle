@@ -11,8 +11,8 @@ android {
         applicationId 'io.github.superslop.openrecorder'
         minSdk 29
         targetSdk 36
-        versionCode 10004
-        versionName '1.0.3-power1'
+        versionCode 10005
+        versionName '1.0.3-power2'
     }
 
     buildTypes {

@@ -19,7 +19,8 @@ records. Everything else keeps the upstream behavior.
 - **Package renamed** from `com.openrecorder.app` to
   `io.github.superslop.openrecorder`, so this fork can be installed next to the
   upstream app.
-- **Version** `1.0.3-power1` (version code 10004).
+- **Generic notification icon.** Notifications use a plain info icon that does not suggest screen recording.
+- **Version** `1.0.3-power2` (version code 10005).
 
 ## How to use it
 
@@ -43,10 +44,10 @@ timeout to the longest available value in Android Settings.
 
 ## Verification status
 
-This fork is built and unit-tested by GitHub Actions. It has **not** been tested
-on a physical device. The recording engine is the upstream code converted to
-Kotlin, but on-device behavior (including the Power-button stop) is unverified
-until someone runs it on a phone.
+This fork is built and unit-tested by GitHub Actions. Version 1.0.3-power1
+was tested on a physical device: basic recording with Power-button stop worked.
+Version 1.0.3-power2 changes only the notification icon and the version; the
+recording engine is unchanged.
 
 ## Features
 
