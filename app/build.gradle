@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace 'com.openrecorder.app'
+    namespace 'io.github.superslop.openrecorder'
     compileSdk 37
 
     defaultConfig {
-        applicationId 'com.openrecorder.app'
+        applicationId 'io.github.superslop.openrecorder'
         minSdk 29
         targetSdk 36
-        versionCode 10003
-        versionName '1.0.3'
+        versionCode 10004
+        versionName '1.0.3-power1'
     }
 
     buildTypes {

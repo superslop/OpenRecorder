@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Open Recorder</string>
+    <string name="app_name">Open Recorder Power</string>
     <string name="nav_record">Record</string>
     <string name="nav_settings">Settings</string>
     <string name="nav_recordings">Recordings</string>
@@ -14,7 +14,7 @@
     <string name="about_license">License</string>
     <string name="about_license_value" translatable="false">GPL-3</string>
     <string name="about_version">Version</string>
-    <string name="about_version_value" translatable="false">1.0.3</string>
+    <string name="about_version_value" translatable="false">1.0.3-power1</string>
     <string name="version_tap_thanks">Thanks for using Open Recorder!</string>
     <string name="open_source_licenses">Open source licenses</string>
     <string name="open_source_license_summary">%1$s, %2$s</string>
@@ -69,7 +69,7 @@
     <string name="url_aosp_license" translatable="false">https://source.android.com/docs/setup/about/licenses</string>
     <string name="url_asterisk_ng" translatable="false">https://github.com/Asterisk4Magisk/AsteriskNG/releases/tag/v1.4.2</string>
     <string name="view_on_github">View source code on GitHub</string>
-    <string name="github_url" translatable="false">https://github.com/NoneBaiano/OpenRecorder</string>
+    <string name="github_url" translatable="false">https://github.com/superslop/OpenRecorder</string>
     <string name="github_open_failed">Could not open GitHub.</string>
     <string name="open_license">Open license</string>
     <string name="license_url" translatable="false">https://www.gnu.org/licenses/gpl-3.0.html</string>
@@ -164,6 +164,7 @@
     <string name="start_recording">Start recording</string>
     <string name="cancel_recording">Cancel recording</string>
     <string name="stop_recording">Stop recording</string>
+    <string name="recording_power_stop_hint">Recording. Press the Power button to stop.</string>
     <string name="status_idle">No recording in progress</string>
     <string name="status_preparing">Preparing to record…</string>
     <string name="status_recording">Recording in progress</string>
@@ -172,8 +173,8 @@
     <string name="status_countdown">Recording starts in %1$d</string>
     <string name="status_idle_summary">Adjust your settings, then start your recording</string>
     <string name="status_preparing_summary">The capture will begin after the countdown.</string>
-    <string name="status_recording_summary">Use the button below or the notification to stop.</string>
-    <string name="status_paused_summary">Resume from the notification or use the button below to stop.</string>
+    <string name="status_recording_summary">Press the Power button to stop.</string>
+    <string name="status_paused_summary">Press the Power button to stop.</string>
     <string name="status_saving_summary">The video is being processed and saved on your device.</string>
     <string name="status_countdown_summary">Open the screen you want to capture.</string>
     <string name="permission_denied">Open Recorder permission was cancelled</string>
