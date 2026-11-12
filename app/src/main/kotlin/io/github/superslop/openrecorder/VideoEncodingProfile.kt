@@ -152,7 +152,7 @@ class VideoEncodingProfile private constructor() {
 
         @JvmStatic
         private fun maximumLongEdge(requestedResolution: Int): Int {
-            return when (RecordingOptions.normalizeVideoResolution(requestedResolution)) {
+            return when (requestedResolution) {
                 RecordingOptions.VIDEO_RESOLUTION_NATIVE -> 0
                 RecordingOptions.VIDEO_RESOLUTION_2160P -> LONG_EDGE_2160P
                 RecordingOptions.VIDEO_RESOLUTION_1440P -> LONG_EDGE_1440P
